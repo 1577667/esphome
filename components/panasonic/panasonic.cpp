@@ -160,12 +160,9 @@ bool PanasonicClimate::parse_state_frame_(const uint8_t frame[]) {
     case PANASONIC_FAN_1:
       this->fan_mode = climate::CLIMATE_FAN_LOW;
       break;
-    case PANASONIC_FAN_2:
-    case PANASONIC_FAN_SILENT:
     case PANASONIC_FAN_3:
       this->fan_mode = climate::CLIMATE_FAN_MEDIUM;
       break;
-    case PANASONIC_FAN_4:
     case PANASONIC_FAN_5:
       this->fan_mode = climate::CLIMATE_FAN_HIGH;
       break;
