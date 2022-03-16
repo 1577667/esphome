@@ -79,7 +79,7 @@ uint8_t PanasonicClimate::operation_mode_() {
 
 uint16_t PanasonicClimate::fan_speed_() {
   uint16_t fan_speed;
-  switch (this->fan_mode) {
+  switch (this->fan_mode.value()) {
     case climate::CLIMATE_FAN_LOW:
       fan_speed = PANASONIC_FAN_1 << 8;
       break;
