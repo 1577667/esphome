@@ -113,7 +113,7 @@ uint8_t PanasonicClimate::temperature_() {
     case climate::CLIMATE_MODE_DRY:
       return 0xc0;
     default:
-      uint8_t temperature = (uint8_t) roundf(clamp(this->target_temperature, PANASONIC_TEMP_MIN, PANASONIC_TEMP_MAX));
+      uint8_t temperature = (uint8_t) roundf(clamp<float>(this->target_temperature, PANASONIC_TEMP_MIN, PANASONIC_TEMP_MAX));
       return temperature << 1;
   }
 }
